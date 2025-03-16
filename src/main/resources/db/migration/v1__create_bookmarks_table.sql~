@@ -1,0 +1,14 @@
+CREATE SEQUENCE bm_id_seq
+  START WITH 1
+  INCREMENT BY 50
+  NO MINVALUE
+  NO MAXVALUE
+  CACHE 20;
+
+  CREATE TABLE bookmarks (
+    id BIGINT NOT NULL DEFAULT nextval('bm_id_seq'::regclass),
+    title VARCHAR(255) NOT NULL,
+    url VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+  );

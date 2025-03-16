@@ -1,0 +1,4 @@
+package bookmarker.dto;
+
+public class BookmarkMapper {
+}

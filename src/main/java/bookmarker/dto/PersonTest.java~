@@ -1,0 +1,8 @@
+package bookmarker.dto;
+
+public class PersonTest {
+    public static void main(String[] args) {
+        Person person = Person.builder().build();
+        person = 
+    }
+}
