@@ -13,7 +13,7 @@ public interface BookmarkRepository extends JpaRepository<Bookmark, Long> {
     Page<BookmarkDTO> findBy(Pageable pageable);
 
     @Query("""
-    select new com.sivalabs.bookmarker.domain.BookmarkDTO(b.id, b.title, b.url, b.createdAt) from Bookmark b
+    select new bookmarker.dto.BookmarkDTO(b.id, b.title, b.url, b.createdAt) from Bookmark b
     where lower(b.title) like lower(concat('%', :query, '%'))
     """)
     Page<BookmarkDTO> searchBookmarks(String query, Pageable pageable);
